@@ -6,6 +6,12 @@ h2 {
 
 a {
     text-decoration: none;
+    opacity: 1;
+    transition-property: opacity;
+}
+
+a:hover {
+    opacity: 0.5; 
 }
 
 .page {
@@ -76,6 +82,15 @@ a {
     z-index: 2;
 }
 
+@keyframes rotation {
+    from {
+        transform: rotate(-15deg);
+    }
+    to {
+        transform: rotate(345deg);
+    }
+}
+
 .header__square-pic {
     height: 568px;
     width: 568px;
@@ -84,6 +99,7 @@ a {
     top: 64px;
     right: 0;
     z-index: 1;
+    animation: rotation 20s infinite linear both;
 }
 
 /* блок description */
@@ -121,6 +137,27 @@ a {
 
 .two-columns__paragraph:nth-child(2) {
     margin: 30px 0;
+}
+
+/* блок .technics */
+
+.technics {
+    margin: 0 auto;
+    width: 80%  ;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.cards {
+    width: 920px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+}
+
+.cards__title {
+
 }
 
 /* блок .digits */
